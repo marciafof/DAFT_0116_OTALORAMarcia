@@ -3,16 +3,16 @@
 * Where are you from?
 Bolivia
 * What do you do?
-Career shift to DA
+Environmental engineer doing a Career shift to DA
 * Do you have previous experience with technology/data?
 Yes as a research engineer
 
 # Why am I here
 
 * What has brought you to Ironhack?
-Change career
+I would like to get a certification as a DA and learn skills in DA
 * What knowledge/skills do you expect to learn in this bootcamp?
-Data vis and other skills
+Data vis and a larger overview of DA in business
 
 # What will I do after the bootcamp?
 
