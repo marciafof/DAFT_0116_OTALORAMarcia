@@ -33,13 +33,13 @@ group by titleauthor.au_id,authors.au_lname, authors.au_fname
 ORDER BY NumTitle DESC LIMIT 3;
 
 
-SELECT titleauthor.au_id, titleauthor.title_id, authors.au_lname, authors.au_fname, SUM(sales.qty) as TOTAL
+SELECT titleauthor.au_id, authors.au_lname, authors.au_fname, SUM(sales.qty) as TOTAL
 FROM titleauthor
 LEFT JOIN authors
 ON titleauthor.au_id = authors.au_id
 LEFT JOIN sales 
 ON titleauthor.title_id = sales.title_id
-group by titleauthor.au_id, titleauthor.title_id, authors.au_lname, authors.au_fname
+group by titleauthor.au_id, authors.au_lname, authors.au_fname
 ORDER BY TOTAL DESC LIMIT 3;
 
 -- Now modify your solution in Challenge 3 so that the output will display all 23 authors instead of the top 3. 
