@@ -11,10 +11,11 @@ ORDER BY ORDINAL_POSITION;
 SELECT DISTINCT prime_genre
 FROM applestore;
 -- **2. Which is the genre with the most apps rated?**
-SELECT prime_genre, SUM(rating_count_tot)
+SELECT prime_genre, COUNT(track_name)
 FROM applestore
 WHERE rating_count_tot <> 0
-group by prime_genre;
+group by prime_genre 
+ORDER BY COUNT(track_name) DESC LIMIT 10;
 
 -- **3. Which is the genre with most apps?**
 SELECT prime_genre, COUNT(*)
@@ -30,16 +31,16 @@ group by prime_genre
 ORDER BY COUNT(prime_genre) ASC LIMIT 1;
 ;
 -- **5. Find the top 10 apps most rated.**
-SELECT prime_genre, SUM(rating_count_tot)
+SELECT track_name, SUM(rating_count_tot)
 FROM applestore
-group by prime_genre
+group by track_name
 ORDER BY  SUM(rating_count_tot) DESC LIMIT 10;
 ;
 
 -- **6. Find the top 10 apps best rated by users.**
 SELECT track_name, AVG(user_rating), prime_genre
 FROM applestore
-WHERE rating_count_tot > 10
+WHERE rating_count_tot > 0
 group by track_name, prime_genre
 ORDER BY AVG(user_rating) DESC LIMIT 10;
 ;
@@ -53,16 +54,26 @@ ORDER BY AVG(user_rating) DESC LIMIT 10;
 SELECT prime_genre, AVG(user_rating), SUM(rating_count_tot)
 FROM applestore
 group by prime_genre
-ORDER BY AVG(user_rating), SUM(rating_count_tot);
-;
+ORDER BY AVG(user_rating) DESC, SUM(rating_count_tot) DESC;
+
 -- **11. Do people care about the price of an app?** Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
 SELECT prime_genre, AVG(user_rating), AVG(price)
 FROM applestore
 group by prime_genre
 ORDER BY AVG(user_rating) DESC LIMIT 20;
 ;
+SELECT track_name, AVG(user_rating), AVG(price),SUM(rating_count_tot)
+FROM applestore
+group by track_name
+ORDER BY SUM(rating_count_tot) DESC, AVG(user_rating) DESC LIMIT 20;
+;
 SELECT prime_genre, SUM(rating_count_tot), AVG(price)
 FROM applestore
 group by prime_genre
 ORDER BY AVG(price) DESC LIMIT 20;
+
+SELECT track_name, SUM(rating_count_tot), AVG(price)
+FROM applestore
+group by track_name
+ORDER BY SUM(rating_count_tot) DESC LIMIT 20;
 ;
