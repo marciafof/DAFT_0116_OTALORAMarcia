@@ -58,9 +58,18 @@ FROM order_reviews;
 -- 8. In the order_reviews table, create a new column with a 
 -- description that corresponds to each number category for each review score from 1 - 5, 
 -- then find the review score and category occurring most frequently in the table.
-SELECT COUNT(*) AS NumCategory, review_score
-FROM order_reviews
-GROUP BY review_score;
+SELECT review_score,
+   CASE review_score
+	  WHEN 1 THEN 'UNACCEPTABLE'
+      WHEN 2 THEN 'BAD'
+      WHEN 3 THEN 'DECENT'
+      WHEN 4 THEN 'GOOD'
+      WHEN 5 THEN 'EXCELLENT'
+   END AS revCategory,
+   COUNT(*) AS number_of_reviews 
+FROM order_reviews 
+GROUP BY review_score
+ORDER BY review_score DESC;
 
 
 -- 9. From the order_reviews table, 
