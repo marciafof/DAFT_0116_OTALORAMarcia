@@ -1,5 +1,5 @@
-#CREATE schema ironhack_examples;
-
+# schema ironhack_examples;
+USE ironhack_examples;
 #C:\Users\marci\dev\DAFT_0116_OTALORAMarcia\Module_1\Lab_18_SQL-Queries\applestore-applestore.csv
 
 SELECT *
@@ -13,7 +13,7 @@ FROM applestore;
 -- **2. Which is the genre with the most apps rated?**
 SELECT prime_genre, COUNT(track_name)
 FROM applestore
-WHERE rating_count_tot <> 0
+WHERE rating_count_tot > 0
 group by prime_genre 
 ORDER BY COUNT(track_name) DESC LIMIT 10;
 
@@ -28,14 +28,14 @@ ORDER BY COUNT(prime_genre) DESC LIMIT 1;
 SELECT prime_genre, COUNT(*)
 FROM applestore
 group by prime_genre
-ORDER BY COUNT(prime_genre) ASC LIMIT 1;
-;
+ORDER BY COUNT(prime_genre) ASC LIMIT 5;
+
 -- **5. Find the top 10 apps most rated.**
 SELECT track_name, SUM(rating_count_tot)
 FROM applestore
 group by track_name
 ORDER BY  SUM(rating_count_tot) DESC LIMIT 10;
-;
+
 
 -- **6. Find the top 10 apps best rated by users.**
 SELECT track_name, AVG(user_rating), prime_genre
