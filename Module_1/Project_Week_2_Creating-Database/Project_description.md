@@ -4,11 +4,9 @@
 
 ## Content
 - [Project Description](#project-description)
-- [Database](#Create-Database)
-- [Project Goals](#project-goals)
-- [Schedule](#schedule)
+- [Database](#Databases)
+- [Scripts](#Scripts)
 - [Presentation](#presentation)
-- [Example](#example)
 
 
 ## Project Goals
@@ -34,20 +32,19 @@ Two databases were collected:
  * Our World in Data [https://ourworldindata.org/energy]
 
 Both databases are found in the [/data](/data/) folder in this repository.
-The ER model can be found in the [/img/] folder
+The ER model can be found in the [/img/](/img/) folder
 
 ## Planning
 
-- Planning of your project in Jira [https://tthaopham.atlassian.net/jira/software/projects/DPI/boards/2]
-- Documentation with brainstorming session and tasks definition [https://docs.google.com/document/d/1yn-ZeesGQff6vBcsLQFElriBeCf7DvzYXTcpAF3tIt0/edit?usp=sharing]
+- Planning of your project in Jira [Jira](https://tthaopham.atlassian.net/jira/software/projects/DPI/boards/2)
+- Documentation with brainstorming session and tasks definition [Google doc](https://docs.google.com/document/d/1yn-ZeesGQff6vBcsLQFElriBeCf7DvzYXTcpAF3tIt0/edit?usp=sharing)
 
 ## Scripts
 The scripts for data recovering (.py), cleaning (.py), and processing (.sql) are located in the [scripts](/scripts/) folder is this repository
-- Code in Python for API or Scrapping [/scripts/]
 
 ## Presentation
 
-The slides of the presentation are found in this link [https://docs.google.com/presentation/d/1A_2Vm0axQGdwcZFpS1Bc_U0cwpGs6pAO7RUYKB9i_pI/edit?usp=sharing]
+The slides of the presentation are found in this link [Google slides](https://docs.google.com/presentation/d/1A_2Vm0axQGdwcZFpS1Bc_U0cwpGs6pAO7RUYKB9i_pI/edit?usp=sharing)
 
 
 
