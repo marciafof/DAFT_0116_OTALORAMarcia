@@ -3,12 +3,10 @@
 # Clean your data!
 ## Content
 - [Project Description](#project-description)
-- [Project Goals](#project-goals)
-- [Technical Requirements](#technical-requirements)
-- [Necessary Deliverables](#necessary-deliverables)
-- [Presentation](#presentation)
-- [Suggested Ways to Get Started](#suggested-ways-to-get-started)
-- [Useful Resources](#useful-resources)
+- [Project Steps](#project-steps)
+- [Deliverables](#deliverables)
+- [DB Highlights](#DB-Highlights)
+
 
 ## Project Description
 
@@ -39,6 +37,8 @@ The technical steps that were followed are:
 * Export clean data into MySQL using Pandas.
 * Prepare at least 3 tables analyzing the dataset in MySQL. Consider using ``group by`` statement for it.
 
+---
+
 ## Deliverables
 
 The following deliverables are located in this Github repo.
@@ -47,6 +47,8 @@ The following deliverables are located in this Github repo.
 * **Python file: data_exploration.ipynb** containing all Python code and commands used in the importing, cleaning, manipulation, and exporting of your data set [here](/scripts/).
 * **MySQL queries file: sql_alchemy.ipynb** containing the code to obtain table of your analysis [here](/scripts/).
 * **Presentation slides** [here](https://docs.google.com/presentation/d/1bPut0WU39fLh2fgIVQV76G9lUr76MOoUJW5Dyl5m2zs/edit?usp=sharing)
+
+---
 
 ## DB Highlights
 
@@ -71,3 +73,4 @@ The final product of the data cleaning and data wrangling is a databased compose
 <img src="img/output_data_info.png" width=25%/>
 
 <img src="img/final_output.png" height=20% width=70%/>
+---
